@@ -2,15 +2,19 @@
 
 {% block content %}
 <h1>Signup</h1>
-<form action="/signup" method="post">
+<!-- <table> 
+    <tbody> -->
+    <form action="/signup" method="post">
     <label for="username">Username</label>
-    <input name="username" value="" type="text"/>{% if usererror %}<p class='error'>{{ usererror }}</p>{% endif %}<br/>
+    <input name="username" value="" type="text"/>{% if usererror %}<span class='error'>{{ usererror }}</span>{% endif %}<br/>
     <label for="password">Password</label>
-    <input name="password" value="" type="password"/>{% if passerror %}<p class='error'>{{ passerror }}</p>{% endif %}<br/>
+    <input name="password" value="" type="password"/>{% if passerror %}<span class='error'>{{ passerror }}</span>{% endif %}<br/>
     <label for="verpassword">Verify Password</label>
-    <input name="verpassword" value="" type="password"/>{% if verpasserror %}<p class='error'>{{ verpasserror }}</p>{% endif %}<br/>
+    <input name="verpassword" value="" type="password"/>{% if verpasserror %}<span class='error'>{{ verpasserror }}</span>{% endif %}<br/>
     <label for="email">Email (Optional)</label>
-    <input name="email" value="" type="text"/>{% if emailerror %}<p class='error'>{{ emailerror }}</p>{% endif %}<br/>
+    <input name="email" value="" type="text"/>{% if emailerror %}<span class='error'>{{ emailerror }}</span>{% endif %}<br/>
+<!--    </tbody>    
+</table> -->
     <input type="submit"/>
 </form>
 {% endblock %}
